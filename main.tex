@@ -14,22 +14,29 @@
 \usepackage{graphicx}
 \usepackage{adjustbox}
 \usepackage{caption}
+\usepackage{orcidlink}
 % Pacotes para o Pipeline em TikZ
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc}
 
+% --- COMANDO PARA INSERIR A LOGO ANTES DO TÍTULO ---
+\addtobeamertemplate{title page}{
+    \centering
+    \includegraphics[height=2.7cm]{CBIE_2026.jpg}\par
+}{}
+
 
 % Configurações de Título
-\title[Proficiência ENADE 2017 via TRI]{Mensuração da Proficiência dos Estudantes de Sistemas de Informação na Prova do ENADE (2017) via TRI}
+\title[Proficiência ENADE 2017 via TRI]{Mensuração da Proficiência dos Estudantes de Sistemas de Informação na Prova do ENADE (2017) via Teoria de Resposta ao Item (TRI)}
 
-\author[Valente, Monteiro, Tavares]{\textbf{Mário Diego Rocha Valente}\inst{1} \and \textbf{Dionne Cavalcante Monteiro}\inst{1} \and \textbf{Heliton Ribeiro Tavares}\inst{2}}
+\author[Valente, Monteiro, Tavares]{\textbf{Mário Diego R. Valente}\inst{1} \orcidlink{0000-0001-7262-3336} \and \textbf{Dionne Cavalcante Monteiro}\inst{1} \orcidlink{0000-0003-0838-3379} \and \textbf{Heliton Ribeiro Tavares}\inst{2} \orcidlink{0000-0003-1725-3364}}
 
 \institute[UFPA]{
   \inst{1} Faculdade de Computação -- Universidade Federal do Pará (UFPA) \and
   \inst{2} Faculdade de Estatística -- Universidade Federal do Pará (UFPA)
 }
 
-\date{06/10/2026}
+\date{07/10/2026}
 
 \begin{document}
 
