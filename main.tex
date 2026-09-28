@@ -144,11 +144,11 @@
 \begin{frame}{Modelagem Não-Supervisionada (TRI)}
     \centering
     \vspace{0.4cm}
-    \resizebox{0.95\textwidth}{!}{ % Ajusta o tamanho para caber perfeitamente no slide 16:9
+    \resizebox{0.99\textwidth}{!}{ % Ajusta o tamanho para caber perfeitamente no slide 16:9
     \begin{tikzpicture}[
         node distance=0.8cm and 0.8cm,
         % Estilos das caixas otimizados para layout horizontal
-        inputbox/.style={rectangle, draw=black!70, rounded corners, fill=blue!5, text width=2.8cm, align=center, minimum height=1.8cm, font=\footnotesize},
+        inputbox/.style={rectangle, draw=black!70, rounded corners, fill=blue!5, text width=2.9cm, align=center, minimum height=1.8cm, font=\footnotesize},
         modelbox/.style={rectangle, draw=blue!80, thick, rounded corners, fill=blue!15, text width=3.4cm, align=center, minimum height=1.8cm, font=\footnotesize},
         outputbox/.style={rectangle, draw=black!70, rounded corners, fill=green!10, text width=3.2cm, align=center, minimum height=1.4cm, font=\footnotesize},
         arrow/.style={-{Stealth[scale=1.2]}, thick, draw=black!70}
@@ -180,7 +180,6 @@
     \draw [dashed, draw=red, thick, rounded corners] 
         ($(model.north west)+(-0.2, 0.6)$) rectangle ($(model.south east)+(0.2, -0.2)$);
     \node[text=red, font=\scriptsize\bfseries, above] at ($(model.north)+(0, 0.25)$) {Extração Não-Supervisionada};
-
     \end{tikzpicture}
     }
 \end{frame}
@@ -228,7 +227,7 @@
     \begin{table}[H]
         \centering
         \caption{Medidas Estatísticas da Nota Bruta Geral ($n=11.523$)}
-        \resizebox{0.8\textwidth}{!}{
+       % \resizebox{0.8\textwidth}{!}{
         \begin{tabular}{l|c|c|c}
           \hline \hline
         \textbf{Notas (0 a 100)} & \textbf{Formação Geral} & \textbf{Componente Específico} & \textbf{Nota Final} \\
@@ -240,7 +239,8 @@
         Mediana           &  50,00  & 45,50   &  44,50        \\
         3º Quartil (75\%) &  62,50  &  59,10  &  53,70        \\
           \hline \hline
-        \end{tabular}}
+        \end{tabular}
+      %  }
     \end{table}
 \end{frame}
 
@@ -376,9 +376,9 @@
         \caption{Comparação dos Modelos da TRI (Teste de Razão de Verossimilhança)}
         \resizebox{\textwidth}{!}{
         \begin{tabular}{c|c|c|c|c|c}
-        \toprule
-        \textbf{Comparação} & \textbf{Modelos} & \textbf{AIC} & \textbf{BIC} & \textbf{Verossimilhança} & \textbf{P-valor} \\
-        \midrule
+        \hline \hline
+     \textbf{Comparação} & \textbf{Modelos} & \textbf{AIC} & \textbf{BIC} & \textbf{Verossimilhança} & \textbf{P-valor} \\
+     \hline \hline
         Rasch x ML2PL   &  Rasch    &  417259.8  &  417480.3  &  -208599.9     &  0.000    \\
                         &  ML2PL    &  414313.1  &  414739.5  &  -207098.5     &  0.000    \\
         \midrule
@@ -387,7 +387,7 @@
         \midrule
           ML2PL x ML3PL  & ML2PL     &  414313.1  &  414739.5   &  -207098.5     &  0.000    \\
                          &  \textbf{ML3PL}    &  \textbf{414073.2}  &  \textbf{414712.8}   &  \textbf{-206949.6}     &  \textbf{0.000}    \\
-        \bottomrule
+         \hline \hline
         \end{tabular}}
     \end{table}
 \end{frame}
@@ -401,13 +401,13 @@
         \caption{Estatísticas de Qualidade do Ajuste dos Modelos da TRI}
         \resizebox{\textwidth}{!}{
         \begin{tabular}{c|c|c|c|c|c|c|c|c}
-        \toprule
+         \hline \hline
         \textbf{Modelos} & \textbf{Iterações} & \textbf{$M^{2}$} & \textbf{G.L} & \textbf{P-valor} & \textbf{RMSEA} & \textbf{SRMSR} & \textbf{TLI} & \textbf{CFI} \\
-        \midrule
+         \hline \hline
         Rasch   &  15       & 5550.83    &  405 & 0.000    & 0.033  &  0.043 & 0.8044 & 0.8004   \\
         ML2PL   &  11       & 2069.60    &  377 & 0.000    & 0.019  &  0.019 & 0.9309 & 0.9358   \\
         \textbf{ML3PL}   &  \textbf{21}       & \textbf{1489.91}    &  \textbf{348} & \textbf{0.000}    & \textbf{0.016}  &  \textbf{0.017} & \textbf{0.9595} & \textbf{0.9667}   \\
-        \bottomrule
+        \hline \hline
         \end{tabular}}
     \end{table}
 \end{frame}
@@ -418,9 +418,9 @@
         \centering
         \resizebox{\textwidth}{!}{
         \begin{tabular}{c|l|c|c|c|c}
-        \toprule
+         \hline \hline
         \textbf{Itens} & \textbf{Conteúdo Classificado} & \textbf{Bloom (Cognitivo)} & \textbf{Discrim. ($a_{i}$)} & \textbf{Dificul. ($b_{i}$)} & \textbf{Chute ($c_{i}$)} \\
-        \midrule
+         \hline \hline
         Q01 & Globalização e Política Internacional & Avançado & 1,41 & 1,69 & 0,11 \\
         Q02 & Vida Urbana/Rural/Trabalho; CTS. & Avançado & 0,78 & 1,94 & 0,37 \\
         Q03 & Meio Ambiente; Responsabilidade Social & Avançado & 1,14 & 2,10 & 0,26 \\
@@ -429,15 +429,15 @@
         Q06 & Processos Migratórios; Relações/Trabalho & Básico & 1,19 & -1,75 & 0,03 \\
         Q07 & Cultura e Arte & Avançado & 0,92 & 2,01 & 0,22 \\
         Q08 & Responsabilidade Social/Ética e Cidadania & Intermediário & 0,78 & 1,18 & 0,23 \\
-        Q09 & Algoritmos/Estruturas de Dados & Avançado & 1,16 & 2,95 & 0,13 \\
-        \textbf{Q11} & \textbf{Paradigmas de Ling. de Programação.} & \textbf{Avançado} & \textbf{1,64} & \textbf{1,85} & \textbf{0,13} \\
+       \textbf{ Q09} & \textbf{Algoritmos/Estruturas de Dados} & \textbf{Avançad}o & \textbf{1,16} & \textbf{2,95} & \textbf{0,13} \\
+        Q11 & Paradigmas de Ling. de Programação. & Avançado & 1,64 & 1,85 & 0,13 \\
         Q12 & Arquitetura de Computadores/Sistemas Op. & Intermediário & 0,22 & 0,09 & 0,05 \\
         Q13 & Sistemas Digitais. & Avançado & 0,24 & 2,04 & 0,02 \\
         Q15 & Lógica e Matemática Discreta. & Intermediário & 0,18 & 0,54 & 0,05 \\
         Q16 & Redes de Computadores & Básico & 0,91 & -1,21 & 0,01 \\
         Q17 & Ética, Computador e Sociedade. & Básico & 0,92 & -1,29 & 0,02 \\
-        Q18 & Inteligência Artificial e Computacional. & Avançado & 0,28 & 2,66 & 0,08 \\
-        \bottomrule
+       \textbf{ Q18} & \textbf{Inteligência Artificial e Computacional.} & \textbf{Avançado} & \textbf{0,28} & \textbf{2,66} & \textbf{0,08} \\
+        \hline \hline
         \end{tabular}}
     \end{table}
 \end{frame}
@@ -448,9 +448,9 @@
         \centering
         \resizebox{\textwidth}{!}{
         \begin{tabular}{c|l|c|c|c|c}
-        \toprule
+        \hline \hline
         \textbf{Itens} & \textbf{Conteúdo Classificado} & \textbf{Bloom (Cognitivo)} & \textbf{Discrim. ($a_{i}$)} & \textbf{Dificul. ($b_{i}$)} & \textbf{Chute ($c_{i}$)} \\
-        \midrule
+         \hline \hline
         Q19 & Algoritmos/Estruturas de Dados. & Intermediário & 0,90 & 1,08 & 0,22 \\
         Q20 & Banco de Dados. & Intermediário & 1,27 & 1,17 & 0,15 \\
         Q21 & Redes de Computadores. & Avançado & 1,16 & 1,86 & 0,18 \\
@@ -463,11 +463,11 @@
         Q28 & Computação Gráfica; Processamento de Imagem. & Intermediário & 0,55 & 0,81 & 0,01 \\
         Q30 & Arquitetura de Computadores/Sistemas Op. & Básico & 0,65 & -0,29 & 0,01 \\
         Q31 & Compiladores. & Intermediário & 0,44 & 0,11 & 0,01 \\
-        Q32 & Sistemas Distribuídos. & Avançado & 0,59 & 2,74 & 0,14 \\
+       \textbf{ Q32} & \textbf{Sistemas Distribuídos.} & \textbf{Avançado} & \textbf{0,59} & \textbf{2,74} & \textbf{0,14} \\
         Q33 & Inteligência Artificial e Computacional. & Básico & 1,60 & -1,38 & 0,03 \\
         Q34 & Teoria da Computação/Algoritmos/Estruturas. & Intermediário & 1,00 & 0,88 & 0,16 \\
         Q35 & Banco de Dados & Intermediário & 1,13 & 0,25 & 0,18 \\
-        \bottomrule
+         \hline \hline
         \end{tabular}}
     \end{table}
 \end{frame}
@@ -504,7 +504,7 @@
 \begin{frame}{Histograma de Proficiência ($\theta$)}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth,height=0.85\textheight,keepaspectratio]{histograma_proficiencia1.jpeg}
+        \includegraphics[width=\textwidth,height=0.86\textheight,keepaspectratio]{histograma_proficiencia1.jpeg}
         %\caption{Distribuição dos Estudantes: Básico (12,20\%), Intermediário (75,94\%) e Avançado (11,86\%).}
     \end{figure}
 \end{frame}
